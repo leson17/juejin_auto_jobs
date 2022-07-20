@@ -1,15 +1,43 @@
-const { COOKIE, USER, PASS, TO, UID, DD_BOT_TOKEN, DD_BOT_SECRET, WORKWX_WEBHOOK } = process.env;
+/*
+ * @Description: 
+ * @Author: Linxian Hong
+ * @Date: 2022-07-20 10:45:53
+ * @LastEditTime: 2022-07-20 14:46:19
+ * @LastEditors: Linxian Hong
+ */
+// const { COOKIE, USER, PASS, TO, UID, DD_BOT_TOKEN, DD_BOT_SECRET, WORKWX_WEBHOOK } = process.env;
+const {
+  COOKIE = '',
+  USER = '',
+  PASS = '',
+  TO = '',
+  UID = '',
+  DD_BOT_TOKEN = '',
+  DD_BOT_SECRET = '',
+  WORKWX_WEBHOOK = '',
+} = {};
 
 const headers = {
-  'content-type': 'application/json; charset=utf-8',
-  'user-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36',
-  'accept-encoding': 'gzip, deflate, br',
-  'accept-language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7',
-  'sec-ch-ua': '"Chromium";v="88", "Google Chrome";v="88", ";Not A Brand";v="99"',
-  'sec-ch-ua-mobile': '?0',
-  referer: 'https://juejin.cn/',
-  accept: '*/*',
-  cookie: COOKIE
+  "content-type": "application/json; charset=utf-8",
+  "user-agent":
+    "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36",
+  "accept-encoding": "gzip, deflate, br",
+  "accept-language": "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+  "sec-ch-ua":
+    '"Chromium";v="88", "Google Chrome";v="88", ";Not A Brand";v="99"',
+  "sec-ch-ua-mobile": "?0",
+  referer: "https://juejin.cn/",
+  accept: "*/*",
+  cookie: COOKIE,
 };
 
-module.exports = { headers, user: USER, pass: PASS, to: TO, uid: UID, DD_BOT_TOKEN, DD_BOT_SECRET, WORKWX_WEBHOOK };
+module.exports = {
+  headers,
+  user: USER,
+  pass: PASS,
+  to: TO,
+  uid: UID,
+  DD_BOT_TOKEN,
+  DD_BOT_SECRET,
+  WORKWX_WEBHOOK,
+};
